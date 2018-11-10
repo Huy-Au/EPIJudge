@@ -5,9 +5,17 @@ from test_framework import generic_test
 from test_framework.test_failure import TestFailure
 from test_framework.test_utils import enable_executor_hook
 
-
+"""
+    Two pointer method which requires no additional memory. Runs at O(n) time.
+"""
 def even_odd(A):
-    # TODO - you fill in here.
+    even_index, odd_index = 0, len(A) - 1
+    while even_index < odd_index:
+        if A[even_index] % 2 == 0:
+            even_index += 1
+        else:
+            A[even_index], A[odd_index] = A[odd_index], A[even_index]
+            odd_index -= 1
     return
 
 

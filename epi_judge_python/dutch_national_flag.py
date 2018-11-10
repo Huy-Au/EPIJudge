@@ -11,7 +11,6 @@ def dutch_flag_partition(pivot_index, A):
     # TODO - you fill in here.
     return
 
-
 @enable_executor_hook
 def dutch_flag_partition_wrapper(executor, A, pivot_idx):
     count = [0, 0, 0]

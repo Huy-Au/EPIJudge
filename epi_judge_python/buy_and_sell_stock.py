@@ -2,8 +2,15 @@ from test_framework import generic_test
 
 
 def buy_and_sell_stock_once(prices):
-    # TODO - you fill in here.
-    return 0.0
+    profit = 0
+    min = prices[0]
+    for ele in prices:
+        if ele > min:
+            if ele - min > profit:
+                profit = ele - min
+        elif ele < min:
+            min = ele
+    return profit
 
 
 if __name__ == '__main__':

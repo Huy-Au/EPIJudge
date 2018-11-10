@@ -6,6 +6,7 @@ def multiply(x, y):
         while b:
             carry = a & b
             a, b = a ^ b, carry << 1
+
         return a
 
     running_sum = 0
@@ -15,8 +16,8 @@ def multiply(x, y):
         x, y = x >> 1, y << 1
     return running_sum
 
-
-if __name__ == '__main__':
-    exit(
-        generic_test.generic_test_main("primitive_multiply.py",
-                                       'primitive_multiply.tsv', multiply))
+multiply(9, 13)
+# if __name__ == '__main__':
+#     exit(
+#         generic_test.generic_test_main("primitive_multiply.py",
+#                                        'primitive_multiply.tsv', multiply))
